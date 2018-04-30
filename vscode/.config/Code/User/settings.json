@@ -1,0 +1,56 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "boundary",
+    "editor.fontFamily": "'Roboto Mono', monospace",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "line-thin",
+    "editor.renderControlCharacters": true,
+    "editor.showFoldingControls": "always",
+    "editor.dragAndDrop": false,
+    "window.menuBarVisibility": "toggle",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.minimap.showSlider": "always",
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%.tex"
+            ]
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "extensions.ignoreRecommendations": false,
+    "files.associations": {
+        "Berksfile": "ruby",
+        "*.sls": "yaml"
+    },
+    "editor.tabSize": 2,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "gitlens.keymap": "none",
+    "explorer.confirmDelete": false
+}

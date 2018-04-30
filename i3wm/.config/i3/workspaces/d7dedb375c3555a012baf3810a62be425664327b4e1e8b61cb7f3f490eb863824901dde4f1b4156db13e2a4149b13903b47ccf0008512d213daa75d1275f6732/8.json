@@ -1,0 +1,44 @@
+{
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "name": "Google Chrome",
+            "percent": 0.5,
+            "swallows": [
+                {
+                    "class": "^Google\\-chrome$"
+                }
+            ],
+            "type": "con"
+        },
+        {
+            "layout": "tabbed",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "name": "PulseAudio Multiband EQ",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^Pulseaudio\\-equalizer\\.py$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "name": "Volume Control",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "title": "^PulseAudio\\ Multiband\\ EQ"
+                        }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}

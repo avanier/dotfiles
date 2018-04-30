@@ -1,0 +1,65 @@
+{
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "layout": "splith",
+            "percent": 0.1,
+            "type": "con",
+            "nodes": [
+                {
+                    "name": "tty-clock -cC 1",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^URxvt$",
+                            "instance": "^clock_local$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "name": "tty-clock -scuC 3",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^URxvt$",
+                            "instance": "^clock_utc$"
+                        }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "layout": "splitv",
+            "percent": 0.9,
+            "type": "con",
+            "nodes": [
+                {
+                    "name": "vis",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^URxvt$",
+                            "instance": "^vis$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "name": "vis",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^URxvt$",
+                            "instance": "^vis$"
+                        }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
