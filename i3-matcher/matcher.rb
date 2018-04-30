@@ -35,10 +35,13 @@ end
 
 if post
   workspace_path = File.join(ENV['HOME'], '.config/i3/workspaces', machine_sha)
+  puts('workspace_path: ' + workspace_path) if ENV['DEBUG']
 
   Dir.glob(File.join(workspace_path, '*.json')).each do |file|
     workspace_name = File.basename(file, '.json')
-    next unless workspace_name == ARGV[1] && ARGV[1]
+    if ARGV[1]
+    	next unless workspace_name == ARGV[1]
+    end
     if ENV['DEBUG']
       puts file
       template = File.join(File.dirname(file), workspace_name + '.i3')
