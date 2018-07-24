@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "workbench.colorTheme": "Solarized Dark",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.renderWhitespace": "boundary",
     "editor.fontFamily": "'Roboto Mono', monospace",
     "editor.rulers": [
@@ -52,5 +52,8 @@
         "suppressWelcomeNotice": true
     },
     "gitlens.keymap": "none",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "markdownlint.customRules": [
+        "/home/alexis.vanier/code/adgear/style/markdown/mdlrc.rb"
+    ]
 }
