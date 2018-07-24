@@ -47,8 +47,9 @@ exec --no-startup-id kgpg
 exec --no-startup-id blueman-applet
 exec --no-startup-id pasystray
 exec --no-startup-id usbguard-applet-qt
-exec --no-startup-id redshift 
+exec --no-startup-id redshift
 exec --no-startup-id polychromatic-tray-applet
+exec --no-startup-id gpgsync
 
 # Move workspace to output
 bindsym $mod+z move workspace to output left
