@@ -9,18 +9,17 @@ plugins=(git chef kitchen knife vagrant git-open rbenv ax-aliases)
 export LANG=en_US.UTF-8
 
 export EDITOR="emacs -nw"
+
 export GOPATH="$HOME/src/gopath"
 export GOBIN="$GOPATH/bin"
 export GB="$GOBIN"
 
-export CONCOURSE_EXTERNAL_URL=http://$(ip addr show wlp6s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1):9543
-
 source <(kubectl completion zsh)
-
 
 alias emacs='emacs -nw'
 alias clock="tty-clock -c -C 1 -n -f '%A, %B %d %Y'"
 alias cmatrix="cmatrix -abs -u 9 -C yellow"
+alias pass="gopass"
 
 alias kc="kitchen converge"
 alias kd="kitchen destroy"
@@ -31,7 +30,7 @@ alias kdc="kitchen destroy && kitchen converge"
 alias kda="vagrant global-status --prune"
 
 alias lzh="source ~/.zshrc"
-alias ezh="emacs -nw ~/.zshrc"
+alias ezh="${EDITOR} ~/.zshrc"
 
 alias ei3="emacs -nw ~/.config/i3/config"
 
@@ -55,7 +54,7 @@ function rinit() {
   curl -s https://gist.githubusercontent.com/zenorocha/4526327/raw/5b41e986a8ac81cf97f53cb2015f07b21c0795b9/README.md > ${DEST}
 }
 
-export VAULT_ADDR="http://vault.amonoid.io:8200"
+export VAULT_ADDR="https://vault.amonoid.io:8200"
 
 function vault-login() {
     vault login -method=github token="$(cat ~/.github_token)"
@@ -71,6 +70,13 @@ if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-s
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+source <(gopass completion zsh | head -n -1 | tail -n +2)
+compdef _gopass gopass
+compdef _gopass pass
+
+source <(Kubectl completion zsh)
+compdef _kubectl kubectl
 
 # Adds yarn global bins to path
 export PATH="$(yarn global bin):$PATH"
