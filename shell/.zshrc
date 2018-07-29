@@ -4,7 +4,7 @@ export ZSH=/home/avanier/.oh-my-zsh
 ZSH_THEME="ax"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git elixir chef kitchen knife pass vagrant git-open rbenv kubectl gopass ax-aliases)
+plugins=(git chef kitchen knife vagrant git-open rbenv ax-aliases)
 
 export LANG=en_US.UTF-8
 
