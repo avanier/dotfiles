@@ -47,8 +47,9 @@ exec --no-startup-id kgpg
 exec --no-startup-id blueman-applet
 exec --no-startup-id pasystray
 exec --no-startup-id usbguard-applet-qt
-exec --no-startup-id redshift 
+exec --no-startup-id redshift
 exec --no-startup-id polychromatic-tray-applet
+exec --no-startup-id gpgsync
 
 # Move workspace to output
 bindsym $mod+z move workspace to output left
@@ -59,10 +60,10 @@ bindsym mod1+$mod+Left workspace prev_on_output
 bindsym mod1+$mod+Right workspace next_on_output
 
 # Open a terminal in the highlighted application's $CWD
-bindsym $mod+Shift+Return exec urxvt -cd "`xcwd`"
+bindsym $mod+Shift+Return exec termite -d "`xcwd`"
 
 # Lock Screen
-bindsym Control+Shift+BackSpace exec --no-startup-id sxlock -u "$(getent passwd "$(whoami)" | cut -d : -f 5)" -l -p '.' -f '*-terminal-*-*-*-*-18-*-*-*-*-*-iso8859-1'
+bindsym Control+Shift+BackSpace exec --no-startup-id /usr/bin/sxlock -u "$(getent passwd "$(whoami)" | cut -d : -f 5)" -l -p '.' -f '*-terminus-*-*-*-*-18-*-*-*-*-*-iso8859-1'
 
 # Set keyboards maps
 bindsym $mod+o exec --no-startup-id setxkbmap us
