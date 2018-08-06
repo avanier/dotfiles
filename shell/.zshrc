@@ -62,6 +62,8 @@ function vault-login() {
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+
 source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -75,7 +77,7 @@ source <(gopass completion zsh | head -n -1 | tail -n +2)
 compdef _gopass gopass
 compdef _gopass pass
 
-source <(Kubectl completion zsh)
+source <(kubectl completion zsh)
 compdef _kubectl kubectl
 
 # Adds yarn global bins to path
