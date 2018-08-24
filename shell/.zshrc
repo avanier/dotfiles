@@ -14,12 +14,11 @@ export GOPATH="$HOME/src/gopath"
 export GOBIN="$GOPATH/bin"
 export GB="$GOBIN"
 
-source <(kubectl completion zsh)
-
 alias emacs='emacs -nw'
 alias clock="tty-clock -c -C 1 -n -f '%A, %B %d %Y'"
 alias cmatrix="cmatrix -abs -u 9 -C yellow"
 alias pass="gopass"
+alias ssh="TERM=xterm-256color ssh"
 
 alias kc="kitchen converge"
 alias kd="kitchen destroy"
