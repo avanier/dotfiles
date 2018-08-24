@@ -21,7 +21,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ponylang-mode zop-to-char zenburn-theme yaml-mode which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line projectile ov operate-on-number move-text markdown-mode magit imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flymd flycheck expand-region editorconfig easy-kill dockerfile-mode docker discover-my-major diminish diff-hl crux browse-kill-ring beacon anzu alchemist ace-window))))
+    (markdown-mode+ ponylang-mode zop-to-char zenburn-theme yaml-mode which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line projectile ov operate-on-number move-text markdown-mode magit imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flymd flycheck expand-region editorconfig easy-kill dockerfile-mode docker discover-my-major diminish diff-hl crux browse-kill-ring beacon anzu alchemist ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
