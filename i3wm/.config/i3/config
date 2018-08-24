@@ -50,6 +50,7 @@ exec --no-startup-id usbguard-applet-qt
 exec --no-startup-id redshift
 exec --no-startup-id polychromatic-tray-applet
 exec --no-startup-id gpgsync
+exec --no-startup-id qjackctl
 
 # Move workspace to output
 bindsym $mod+z move workspace to output left
