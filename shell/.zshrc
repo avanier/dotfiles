@@ -100,3 +100,9 @@ compdef _kubectl kubectl
 
 # Adds yarn global bins to path
 export PATH="$(yarn global bin):$PATH"
+
+# Erlang and Elixir stuff
+test -f /opt/erlang/activate && . /opt/erlang/activate
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+# zprof # uncomment to profile
