@@ -33,7 +33,7 @@ alias ezh="${EDITOR} ~/.zshrc"
 
 alias ei3="emacs -nw ~/.config/i3/config"
 
-alias genpw="docker --rm -it avanier/hsxkpasswd-alpine"
+alias genpw="docker run --rm -it avanier/hsxkpasswd-alpine"
 
 function list_vms {
 	VBoxManage list vms | awk '{print $1}'
