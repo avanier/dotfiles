@@ -1,3 +1,5 @@
+# zmodload zsh/zprof # uncomment to profile
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/avanier/.oh-my-zsh
 
