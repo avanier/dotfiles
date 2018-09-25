@@ -87,6 +87,9 @@ npm() {
     npm "$@"
 }
 
+# Adds yarn global bins, python user, and GOBIN to path
+export PATH="$(yarn global bin):${GOBIN}:${HOME}/.local/bin:${PATH}"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -99,9 +102,6 @@ compdef _gopass pass
 
 source <(kubectl completion zsh)
 compdef _kubectl kubectl
-
-# Adds yarn global bins to path
-export PATH="$(yarn global bin):$PATH"
 
 # Erlang and Elixir stuff
 test -f /opt/erlang/activate && . /opt/erlang/activate
